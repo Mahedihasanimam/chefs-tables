@@ -1,12 +1,13 @@
 
 import './App.css'
+import Navigation from './components/navigation/Navigation'
 
 function App() {
 
 
   return (
     <>
-      <h1>initialize the project</h1>
+      <Navigation></Navigation>
       
     </>
   )
