@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { FaRegCircleUser } from "react-icons/fa6";
 
-const Navigation = (props) => {
+const Navigation = () => {
   return (
-   <div className="px-8">
+   <div className="px-8 pb-8">
      <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
@@ -32,7 +32,7 @@ const Navigation = (props) => {
   <div className="lg:px-5 md:px-5">
   <label className="input bg-gray-100 flex items-center gap-2 rounded-full lg:w-full md:w-full float-right w-2/5">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
-  <input type="text" className="grow border-none text-[#150B2BB3]"  placeholder="Search" />
+  <input type="text" className=" border-none text-[#150B2BB3] w-2/3"  placeholder="Search" />
 </label>
   </div>
     <FaRegCircleUser className="text-3xl p-2 bg-[#0BE58A] rounded-full lg:block md:block hidden"></FaRegCircleUser>
