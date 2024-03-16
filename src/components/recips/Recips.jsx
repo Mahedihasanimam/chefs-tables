@@ -13,7 +13,7 @@ const Recips = ({handleAddCook}) => {
         .then(data=>setRecips(data))
     },[])
   return (  
-      <div className="w-2/4 grid lg:grid-cols-2 grid-cols-1 gap-8">
+      <div className="lg:w-2/4 w-full grid lg:grid-cols-2 grid-cols-1 gap-8 mb-6">
       {
         recips.map(card=><Rcard key={card.recipe_id} card={card} handleAddCook={handleAddCook}></Rcard>)
       }

@@ -5,7 +5,7 @@ import Cooking from '../cooking/Cooking';
 
 const Cook = ({cook,handleCooking,cooking}) => {
     return (
-        <div className='w-2/5 border-solid border-2 border-gray-200 h-fit py-10 rounded-2xl shadow-md p-4 '>
+        <div className='lg:w-2/5 w-full border-solid border-2 border-gray-200 h-fit py-10 rounded-2xl shadow-md p-4 '>
             <h3 className='text-2xl font-bold text-center pb-4 '>Want to cook : {cook.length} </h3>
             <hr />
            <br />

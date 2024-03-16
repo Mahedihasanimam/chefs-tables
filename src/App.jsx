@@ -22,9 +22,8 @@ function App() {
   }
   const handleCooking=(item)=>{
     const newck=cook.filter(sitem=> sitem !==item);
-    const newCook=[...cooking,item]
     setCooking(newck)
-    console.log(item)
+    
 }
 console.log(cook)
   return (
@@ -37,7 +36,7 @@ console.log(cook)
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non libero consequuntur dicta provident sapiente praesentium, perspiciatis magnam dignissimos est quam.</p>
         </div>
       </div>
-      <div className=" flex justify-between gap-8 my-6 p-6">
+      <div className="flex lg:flex-row flex-col-reverse justify-between gap-8 my-6 p-6">
       <Recips  handleAddCook={handleAddCook}></Recips>
       <Cook cooking={cooking} handleCooking={handleCooking} cook={cook}></Cook>
       
