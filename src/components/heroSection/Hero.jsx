@@ -8,7 +8,7 @@ const Hero = () => {
             "url(https://i.ibb.co/KN5LrvQ/Rectangle-1-1.png)",
         }}
       >
-        <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
+        <div className=" bg-opacity-60 rounded-3xl"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className=" text-white lg:w-4/6 w-full space-y-8">
             <h1 className="mb-5 lg:text-5xl text-2xl font-bold">Discover an exceptional cooking  class tailored for you!</h1>

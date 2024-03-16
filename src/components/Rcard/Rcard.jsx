@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { CiClock2 } from "react-icons/ci";
 import { FaFire } from "react-icons/fa";
-const Rcard = ({ card }) => {
+const Rcard = ({ card,handleAddCook }) => {
   const {
     recipe_id,
     recipe_image,
@@ -42,7 +42,7 @@ const Rcard = ({ card }) => {
             </span>
           </div>
           <div className="card-actions ">
-            <button className="btn rounded-full px-8 bg-[#0BE58A] text-white outline-none border-none lg:mr-12 md:mr-12 mr-4 mb-5 hover:bg-[#0BE58A]">
+            <button onClick={()=>handleAddCook(card)} className="btn rounded-full px-8 bg-[#0BE58A] text-white outline-none border-none lg:mr-12 md:mr-12 mr-4 mb-5 hover:bg-[#0BE58A]">
               Want to Cook
             </button>
           </div>
@@ -53,5 +53,6 @@ const Rcard = ({ card }) => {
 };
 Rcard.propTypes = {
   card: PropTypes.func,
+  handleAddCook : PropTypes.func
 };
 export default Rcard;

@@ -1,33 +1,27 @@
 
 import { useEffect, useState } from "react";
 import Rcard from "../Rcard/Rcard";
-import Cook from "../wantCook/Cook";
+
+import PropTypes from "prop-types";
 
 
-
-const Recips = () => {
+const Recips = ({handleAddCook}) => {
     const [recips,setRecips]=useState([])
     useEffect(()=>{
         fetch('recips.json')
         .then(res=>res.json())
         .then(data=>setRecips(data))
     },[])
-  return (
-    <div>
-        <div>
-
-        </div>
-        <div className=" flex justify-between gap-8 my-6 p-6">
-      <div className="w-3/5 grid grid-cols-2 gap-8">
+  return (  
+      <div className="w-2/4 grid lg:grid-cols-2 grid-cols-1 gap-8">
       {
-        recips.map(card=><Rcard key={card.recipe_id} card={card}></Rcard>)
+        recips.map(card=><Rcard key={card.recipe_id} card={card} handleAddCook={handleAddCook}></Rcard>)
       }
       </div>
-      <div className="w-2/5">
-        <Cook></Cook>
-      </div>
-    </div>
-    </div>
+    
   );
+};
+Recips.propTypes = {
+  handleAddCook: PropTypes.func,
 };
 export default Recips;
