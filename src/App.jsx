@@ -5,7 +5,8 @@ import Hero from './components/heroSection/Hero'
 import Navigation from './components/navigation/Navigation'
 import Recips from './components/recips/Recips'
 import Cook from './components/wantCook/Cook'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [cook,setCook]=useState([])
@@ -17,7 +18,7 @@ function App() {
       setCook(newCookValue)
     }
     else{
-      alert('lksf')
+      toast('already exsist')
     }
   }
   const handleCooking=(item)=>{
@@ -37,6 +38,7 @@ console.log(cook)
         </div>
       </div>
       <div className="flex lg:flex-row flex-col-reverse justify-between gap-8 my-6 p-6">
+        <ToastContainer></ToastContainer>
       <Recips  handleAddCook={handleAddCook}></Recips>
       <Cook cooking={cooking} handleCooking={handleCooking} cook={cook}></Cook>
       
