@@ -46,7 +46,7 @@ const Cook = ({cook,handlePreparing,move}) => {
 Cook.propTypes = {
     cook : PropTypes.func,
     handlePreparing : PropTypes.func,
-    cooking : PropTypes.func
+    move : PropTypes.func
 };
 
 export default Cook;
