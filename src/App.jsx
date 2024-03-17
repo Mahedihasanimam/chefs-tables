@@ -9,8 +9,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+  const [move,setMove]=useState([])
   const [cook,setCook]=useState([])
-  const [cooking,setCooking]=useState([])
+  // const [cooking,setCooking]=useState([])
   const handleAddCook=(item)=>{
     const isExist=cook.find(mycook=>mycook===item);
     if(!isExist){
@@ -21,12 +22,16 @@ function App() {
       toast('already exsist')
     }
   }
-  const handleCooking=(item)=>{
-    const newck=cook.filter(sitem=> sitem !==item);
-    setCooking(newck)
-    
+
+  const handlePreparing=(item)=>{
+    console.log(item.recipe_id)
+    const newck=cook.filter(sitem=>sitem.recipe_id !== item.recipe_id);
+    setCook(newck)
+   const newmove=cook.find(sitem=>sitem.recipe_id == item.recipe_id);
+   setMove([...move,newmove])
+
 }
-console.log(cook)
+console.log(move)
   return (
     <>
       <Navigation></Navigation>
@@ -40,8 +45,8 @@ console.log(cook)
       <div className="flex lg:flex-row flex-col-reverse justify-between gap-8 my-6 p-6">
         <ToastContainer></ToastContainer>
       <Recips  handleAddCook={handleAddCook}></Recips>
-      <Cook cooking={cooking} handleCooking={handleCooking} cook={cook}></Cook>
-      
+      <Cook move={move} handlePreparing={handlePreparing} cook={cook}></Cook>
+
       </div>
     </>
   )
