@@ -11,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [move,setMove]=useState([])
   const [cook,setCook]=useState([])
-  // const [cooking,setCooking]=useState([])
   const handleAddCook=(item)=>{
     const isExist=cook.find(mycook=>mycook===item);
     if(!isExist){
@@ -24,7 +23,6 @@ function App() {
   }
 
   const handlePreparing=(item)=>{
-    console.log(item.recipe_id)
     const newck=cook.filter(sitem=>sitem.recipe_id !== item.recipe_id);
     setCook(newck)
    const newmove=cook.find(sitem=>sitem.recipe_id == item.recipe_id);
@@ -39,7 +37,7 @@ console.log(move)
       <div>
       <div className="text-center my-6 lg:w-2/4 mx-auto space-y-2">
             <h3 className="text-4xl font-bold">our recips</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non libero consequuntur dicta provident sapiente praesentium, perspiciatis magnam dignissimos est quam.</p>
+            <p>Our recipes are a treasure trove of flavor, crafted with care and love. From traditional delights to modern marvels, explore culinary bliss with us</p>
         </div>
       </div>
       <div className="flex lg:flex-row flex-col-reverse justify-between gap-8 my-6 p-6">

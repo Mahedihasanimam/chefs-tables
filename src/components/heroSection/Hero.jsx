@@ -13,7 +13,7 @@ const Hero = () => {
           <div className=" text-white lg:w-4/6 w-full space-y-8">
             <h1 className="mb-5 lg:text-5xl text-2xl font-bold">Discover an exceptional cooking  class tailored for you!</h1>
             <p className="mb-5 opacity-80">
-            Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding <br /> problems to become an exceptionally well world-class Programmer.
+            Recipe calories provide vital nutritional information, guiding health-conscious choices. Understanding calorie content aids in meal planning, promoting balanced diets and mindful eating habits.
             </p>
             <button className="btn rounded-full px-8 bg-[#0BE58A] text-white outline-none border-none lg:mr-12 md:mr-12 mr-4 mb-5 hover:bg-[#0BE58A]">Explore Now</button>
             <button className=" btn rounded-full px-8 bg-transparent text-white border-1 border-white hover:bg-[#0BE58A]">Our Feedback</button>
